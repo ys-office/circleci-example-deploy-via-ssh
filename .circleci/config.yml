@@ -19,8 +19,7 @@ jobs:
       # CircleCI に登録した秘密鍵を呼び出す
       - add_ssh_keys
       # CircleCI に登録した環境変数を使って SSH
-      # - run: ssh ${SSH_USER}@${SSH_HOST} "cd ${HOME}/workspace/circleci/ys-office/circleci-example-deploy-via-ssh/ && git pull"
-      - run: ssh ubuntu@52.192.113.17 "cd /home/ubuntu/workspace/circleci/ys-office/circleci-example-deploy-via-ssh/ && git pull"
+      - run: ssh ${SSH_USER}@${SSH_HOST} "cd ${REPO}/ && git pull"
  
 workflows:
   version: 2
